@@ -685,6 +685,89 @@ transition: var(--transition-1);
   #FOOTER
 \*-----------------------------------*/
 
+.footer-top {
+  display: grid;
+  gap: 40px;
+  padding-block: 60px;
+}
+
+.footer .logo img { width: 180px;}
+
+.footer-brand .footer-text { margin-block: 20px; }
+
+.social-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.social-link {
+  color: var(--text-majorelle-blue);
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: var(--radius-pill);
+  transition: var(--transition-1);
+}
+
+.social-link:is(:hover, :focus-visible) {
+  background-color: var(--bg-majorelle-blue);
+  color: var(--text-white);
+}
+
+.footer-list-title {
+  color: var(--text-gunmetal);
+  font-size: var(--fontSize-5);
+  font-weight: var(--weight-semiBold);
+  margin-block-end: 15px;
+}
+
+.footer-link { margin-block-start: 10px;}
+
+.footer-link:is(:hover, :focus-visible) { text-decoration: underline;}
+
+.footer-list .footer-text { margin-block-end: 15px;}
+
+.input-field {
+  height: 55px;
+  padding-inline: 25px 60px;
+  border: 1px solid var(--border-gainsboro);
+  border-radius: var(--radius-pill);
+  color: var(--text-gunmetal);
+}
+
+.input-wrapper { position: relative;}
+
+.input-field:focus { border-color: var(--bg-majorelle-blue);}
+
+.input-btn {
+  width: 45px;
+  height: 45px;
+  background-color: var(--bg-majorelle-blue);
+  font-size: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius-circle);
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  transition: var(--transition-1);
+  color: var(--text-white);
+}
+
+.input-btn ion-icon { transform: translateX(-2px) rotate(45deg); }
+
+.input-btn:is(:hover, :focus-visible) { background-color: var(--bg-ocean-blue);}
+
+.footer-bottom {
+  padding-block: 30px;
+  border-block-start: 1px solid var(--border-gainsboro);
+}
+
+.copyright { margin-block-end: 20px ;}
+
+.footer-bottom-link:is(:hover, :focus-visible) { text-decoration: underline;}
+
 
 
 
@@ -692,3 +775,15 @@ transition: var(--transition-1);
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-wdth: 575px) {
+  .container {
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+
+
+  
+}
