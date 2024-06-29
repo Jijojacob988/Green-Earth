@@ -15,7 +15,7 @@ const addEventOnElements = function (elements, eventType, callback) {
 
 const navbar = document.querySelector("[data-navbar]");
 const navTogglers = document.querySelectorAll("[data-nav-toggler]");
-const overlay = document.querySelector("[data-overlay]");  // Corrected this line
+const overlay = document.querySelector("[data-overlay]");  
 
 const toggleNav = function () {
     navbar.classList.toggle("active");

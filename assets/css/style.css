@@ -1,59 +1,36 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
 
-/**
- * copyright 2023 codewithsadee
- */
-
-
-
-
-
-/*-----------------------------------*\
-  #CUSTOM PROPERTY
-\*-----------------------------------*/
 
 :root {
-
-  /**
-   * COLORS
-   */
-
-  /* backgroud colors */
-  --bg-white: hsl(0, 0%, 100%);
+  
+  --bg-white: hsl(210, 36%, 96%);
   --bg-black-alpha-20: hsla(0, 0%, 0%, 0.2);
   --bg-lavender-blush: hsl(0, 100%, 98%);
-  --bg-majorelle-blue: hsl(249, 95%, 63%);
-  --bg-ocean-blue: hsl(249, 63%, 54%);
-  --bg-majorelle-blue-alpha-5: hsla(249, 95%, 63%, 0.05);
+  --bg-majorelle-blue: hsl(120, 60%, 50%); 
+  --bg-ocean-blue: hsl(200, 63%, 54%);
+  --bg-majorelle-blue-alpha-5: hsla(120, 60%, 50%, 0.05); 
   --bg-misty-rose: hsl(0, 100%, 95%);
-  --bg-red-salsa: hsl(357, 94%, 63%);
-  --bg-red-salsa-alpha-5: hsla(357, 94%, 63%, 0.05);
-  --bg-english-vermillion: hsl(357, 64%, 53%);
+  --bg-red-salsa: hsl(0, 76%, 50%);
+  --bg-red-salsa-alpha-5: hsla(0, 76%, 50%, 0.05);
+  --bg-english-vermillion: hsl(0, 64%, 53%);
   --bg-chrome-yellow-alpha-5: hsla(40, 100%, 50%, 0.05);
   --bg-sunglow-alpha-10: hsla(48, 100%, 50%, 0.1);
   --bg-gainsboro: hsl(0, 0%, 85%);
 
-  /* text color */
+ 
   --text-white: hsl(0, 0%, 100%);
-  --text-gunmetal: hsl(209, 40%, 14%);
+  --text-gunmetal: hsl(200, 20%, 20%);
   --text-light-coral: hsl(357, 96%, 73%);
   --text-granite-gray: hsl(210, 4%, 38%);
-  --text-majorelle-blue: hsl(249, 95%, 63%);
+  --text-majorelle-blue: hsl(120, 60%, 50%); 
   --text-sunglow: hsl(48, 100%, 50%);
 
-  /* border color */
+ 
   --border-gainsboro: hsl(0, 1%, 85%);
 
-  /**
-   * TYPOGRAPHY
-   */
-
-  /* font family */
+  
   --ff-poppins: 'Poppins', sans-serif;
 
-  /* font size */
+ 
   --fontSize-1: 4.2rem;
   --fontSize-2: 3.6rem;
   --fontSize-3: 2.5rem;
@@ -62,53 +39,39 @@
   --fontSize-6: 1.6rem;
   --fontSize-7: 1.5rem;
 
-  /* font weight */
+  
   --weight-bold: 700;
   --weight-semiBold: 600;
   --weight-medium: 500;
 
-  /**
-   * SPACING
-   */
+  
 
   --section-spacing: 80px;
 
-  /**
-   * BOX SHADOW
-   */
+  
 
   --shadow-1: 0 2px 10px hsla(209, 40%, 14%, 10%);
-  --shadow-2: 0 5px 10px hsla(249, 95%, 63%, 25%);
+  --shadow-2: 0 5px 10px hsla(120, 60%, 50%, 25%); 
   --shadow-3: 0 5px 10px hsla(357, 64%, 53%, 25%);
   --shadow-4: 0 30px 50px hsla(357, 64%, 53%, 30%);
 
-  /**
-   * RADIUS
-   */
+
 
   --radius-pill: 200px;
   --radius-circle: 50%;
   --radius-30: 30px;
   --radius-20: 20px;
 
-  /**
-   * TRANSITION
-   */
 
   --transition-1: 250ms ease;
   --transition-2: 500ms ease;
   --cubic-out: cubic-bezier(0.05, 0.83, 0.52, 0.97);
-
 }
 
 
 
 
 
-/*-----------------------------------*\
-  #RESET
-
-\*-----------------------------------*/
 
 *,
 *::before,
@@ -171,9 +134,8 @@ body.nav-active { overflow: hidden; }
 
 
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+
+ 
 
 .container { padding-inline: 16px; }
 
@@ -193,14 +155,18 @@ body.nav-active { overflow: hidden; }
 .btn-primary { background-color: var(--bg-majorelle-blue);}
 
 .btn-primary:is(:hover, :focus-visible) {
-  background-color: var(--bg-ocean-blue);
+  background-color: var(rgb(18, 134, 43));
   box-shadow: var(--shadow-2);
 }
 
-.btn-secondary { background-color: var(--bg-red-salsa); }
+.btn-secondary {
+  background-color: var(--bg-majorelle-blue);
+  color: var(--text-white); 
+}
+
 
 .btn-secondary:is(:hover, :focus-visible) {
-  background-color: var(--bg-english-vermillion);
+  background-color: var(green);
   box-shadow: var(--shadow-3);
 }
 
@@ -309,9 +275,6 @@ transition: var(--transition-1);
 }
 
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
 
 
 
@@ -339,11 +302,37 @@ transition: var(--transition-1);
 }
 
 @keyframes slideIn {
-  0% { transform: translateY(-100%);}
-  100% { transform: translateY(0);}
+  0% { transform: translateY(-100%); }
+  100% { transform: translateY(0); }
 }
 
 .header .logo img { width: 160px; }
+
+.logo {
+  font-size: 3rem;
+  color: var(--text-color);
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  white-space: nowrap; 
+  display: flex;
+}
+
+.logo:hover {
+  transform: scale(1.1);
+}
+
+span {
+  background: linear-gradient(
+    270deg,
+    #32CD32 10%, 
+    #006400 100% 
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+
 
 .nav-toggle-btn { font-size: 3.2rem; }
 
@@ -440,11 +429,9 @@ transition: var(--transition-1);
   opacity: 0.5;
 }
 
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
 
-.hero { padding-block-start: 70px; }
+
+.hero { padding-block-start: 140px; }
 
 .hero .container {
   display: grid;
@@ -508,9 +495,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #SERVICE
-\*-----------------------------------*/
+
 
 .service .container {
   display: grid;
@@ -535,9 +520,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #DESTINATION
-\*-----------------------------------*/
+
 
 .desti .section-title { margin-block-end: 40px;}
 
@@ -604,9 +587,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #EXPERIENCE
-\*-----------------------------------*/
+
 
 .exp .container { 
   display: grid;
@@ -641,9 +622,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #GALLERY
-\*-----------------------------------*/
+
 
 .gallery .section-title { margin-block-end: 40px;}
 
@@ -657,9 +636,6 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #CTA
-\*-----------------------------------*/
 
 .cta-card { 
   background-color: var(--bg-misty-rose);
@@ -681,9 +657,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+
 
 .footer-top {
   display: grid;
@@ -772,9 +746,7 @@ transition: var(--transition-1);
 
 
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+
 
 @media (min-width: 575px) {
 
